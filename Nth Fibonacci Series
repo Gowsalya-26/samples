@@ -1,0 +1,16 @@
+//Nth Fibonacci numbers
+#include <stdio.h>
+int main()
+{
+    int first=0,second=1,next,i,num;
+    printf("The total Fibonacci numbers:");
+    scanf("%d",&num);
+    for(i=0;i<=num;i++){
+        printf("%d\t",first);
+        next=first+second;;
+        second=first;
+        first=next;
+    }
+    
+    return 0;
+}
