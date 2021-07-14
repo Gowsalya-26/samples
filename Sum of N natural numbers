@@ -1,0 +1,18 @@
+//Sum of Nnatural numbers
+#include <stdio.h>
+
+int main()
+{
+    int n,sum = 0,i, arr[100];
+   // printf("The total array elements are:");
+    scanf("%d",&n);
+   // printf("The array elements are:");
+    for (i=0;i<=n;i++)
+    {
+        scanf("%d",&arr[i]);
+        sum+=arr[i];
+    }
+    printf("The Sum of N numbers is%d\n:",sum);
+    
+    return 0;
+}
