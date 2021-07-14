@@ -1,0 +1,42 @@
+#include <stdio.h>
+int main()
+{
+    int dd,mm,yy,dd2,mm2,yy2;
+    int date,date2;
+    float price,disc_percentage,disc_amount,discounted_price;
+    printf("Flight Bookiing Amount:");
+    scanf("%f",&price);
+    printf("Discount Percentage:");
+    scanf("%f",&disc_percentage);
+    
+    printf("Flight Bookiing Date:");
+    scanf("%d/%d/%d",&dd,&mm,&yy);
+    date=0;
+    date |=(dd&0xff);
+    date |=(mm&0xff);
+    date |=(yy&0xffff);
+    
+    printf("\n");
+    
+    printf("Will you please tell your DOB(dd/mm/yy):\n");
+    scanf("%d/%d/%d",&dd2,&mm2,&yy2);
+    date=0;
+    date |=(dd2&0xff);
+    date |=(mm2&0xff);
+    date |=(yy2&0xffff);
+    
+    disc_amount      = (disc_percentage * price)/100;
+    discounted_price = (price - disc_amount);
+    
+    printf("If your DOB is match to your Flight Booking Date,then we'll give some Discount to your Flight Booking Price %f\n",disc_amount);
+    
+    if(dd==dd2){
+        printf(" WoW!...Both Dates are matching,Your Discount Price is %f:",discounted_price);
+    }
+    else{
+        printf("Sorry...Both are Different...Have a Nice Journey!");
+    }
+    
+    
+    return 0;
+}
