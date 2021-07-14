@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+    long int num;
+    int i;
+    int repeatednum=0;
+    printf("Enter Number:");
+    scanf("%ld",&num);
+    printf("Enter which number you want to count:");
+    scanf("%d",&i);
+    while(num){
+        if(i==num%10){
+            repeatednum++;
+            num=num/10;
+        }
+    }
+    printf("The number of Repeated digits in a number is:%d",repeatednum);
+
+    return 0;
+}
