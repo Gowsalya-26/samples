@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main()
+{
+    int num,i;
+    printf("The random numbers are [1,100]:");
+    for(i=1;i<=10;i++){
+        num=rand()%100+1;
+        printf("%d\t",num);
+   }
+    
+    return 0;
+}
